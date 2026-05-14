@@ -4,12 +4,16 @@ class Carrito:
         self.productos = []
 
     def eliminar_producto(self, nombre):
-        """
-        Elimina un producto del carrito usando su nombre.
-        """
 
         self.productos = [
             producto
             for producto in self.productos
             if producto.nombre != nombre
         ]
+
+    def calcular_total(self):
+
+        return sum(
+            producto.calcular_subtotal()
+            for producto in self.productos
+        )

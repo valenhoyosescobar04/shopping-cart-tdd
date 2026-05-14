@@ -1,5 +1,11 @@
+"""
+Pruebas del requerimiento RF2:
+Eliminar productos del carrito.
+"""
+
 from src.carrito.carrito import Carrito
 from src.carrito.modelos import Producto
+
 
 def test_debe_eliminar_producto_por_nombre():
 
